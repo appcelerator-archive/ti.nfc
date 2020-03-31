@@ -9,9 +9,7 @@
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
-#if IS_IOS_11
 #import <CoreNFC/CoreNFC.h>
-#endif
 
 @implementation TiNfcModule
 
@@ -36,7 +34,6 @@
   NSLog(@"[DEBUG] %@ loaded", self);
 }
 
-#if IS_IOS_11
 MAKE_SYSTEM_PROP(TNF_EMPTY, NFCTypeNameFormatEmpty);
 MAKE_SYSTEM_PROP(TNF_WELL_KNOWN, NFCTypeNameFormatNFCWellKnown);
 MAKE_SYSTEM_PROP(TNF_MIME_MEDIA, NFCTypeNameFormatMedia);
@@ -59,6 +56,5 @@ MAKE_SYSTEM_PROP(TRANSCEIVE_ERROR_RETRY_EXCEEDED, NFCReaderTransceiveErrorRetryE
 MAKE_SYSTEM_PROP(TRANSCEIVE_ERROR_TAG_RESPONSE_ERROR, NFCReaderTransceiveErrorTagResponseError);
 
 MAKE_SYSTEM_PROP(COMMAND_CONFIGURATION_ERROR_INVALID_PARAMETERS, NFCTagCommandConfigurationErrorInvalidParameters);
-#endif
 
 @end

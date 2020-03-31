@@ -5,8 +5,6 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#if IS_IOS_11
-
 #import "TiNfcNdefMessageProxy.h"
 #import "TiNfcNdefRecordProxy.h"
 
@@ -37,5 +35,3 @@
 }
 
 @end
-
-#endif

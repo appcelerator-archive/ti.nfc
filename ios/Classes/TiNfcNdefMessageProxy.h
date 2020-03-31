@@ -5,8 +5,6 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#if IS_IOS_11
-
 #import "TiNfcNdefRecordProxy.h"
 #import "TiProxy.h"
 #import <CoreNFC/CoreNFC.h>
@@ -22,5 +20,3 @@
 - (NSArray<TiNfcNdefRecordProxy *> *)records;
 
 @end
-
-#endif

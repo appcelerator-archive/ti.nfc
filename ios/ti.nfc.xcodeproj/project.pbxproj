@@ -33,6 +33,8 @@
 		DB4613981F8CEF2A003956CF /* TiNfcUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4613961F8CEF2A003956CF /* TiNfcUtilities.m */; };
 		DB856C461EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB856C441EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.h */; };
 		DB856C471EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB856C451EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.m */; };
+		DBE3BFC420D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE3BFC220D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.h */; };
+		DBE3BFC520D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE3BFC320D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.m */; };
 		DBF688331EEB4B3500009357 /* TiNfcNdefMessageProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF688311EEB4B3500009357 /* TiNfcNdefMessageProxy.h */; };
 		DBF688341EEB4B3500009357 /* TiNfcNdefMessageProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF688321EEB4B3500009357 /* TiNfcNdefMessageProxy.m */; };
 		DBF688371EEB4CB300009357 /* TiNfcNdefRecordProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF688351EEB4CB300009357 /* TiNfcNdefRecordProxy.h */; };
@@ -63,6 +65,8 @@
 		DB856C3F1EE98B1700DE4334 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 		DB856C441EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiNfcNfcAdapterProxy.h; path = Classes/TiNfcNfcAdapterProxy.h; sourceTree = "<group>"; };
 		DB856C451EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiNfcNfcAdapterProxy.m; path = Classes/TiNfcNfcAdapterProxy.m; sourceTree = "<group>"; };
+		DBE3BFC220D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TiAppiOSUserActivityProxy+NFC.h"; path = "Classes/TiAppiOSUserActivityProxy+NFC.h"; sourceTree = "<group>"; };
+		DBE3BFC320D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "TiAppiOSUserActivityProxy+NFC.m"; path = "Classes/TiAppiOSUserActivityProxy+NFC.m"; sourceTree = "<group>"; };
 		DBF688311EEB4B3500009357 /* TiNfcNdefMessageProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiNfcNdefMessageProxy.h; path = Classes/TiNfcNdefMessageProxy.h; sourceTree = "<group>"; };
 		DBF688321EEB4B3500009357 /* TiNfcNdefMessageProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiNfcNdefMessageProxy.m; path = Classes/TiNfcNdefMessageProxy.m; sourceTree = "<group>"; };
 		DBF688351EEB4CB300009357 /* TiNfcNdefRecordProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiNfcNdefRecordProxy.h; path = Classes/TiNfcNdefRecordProxy.h; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DBE3BFC120D28705006EF4AE /* Extensions */,
 				DB6F99951EEB4AC2004F18FE /* NFC Record */,
 				DB6F99941EEB4ABC004F18FE /* NFC Message */,
 				DB6F99931EEB4AB2004F18FE /* NFC Adapter */,
@@ -162,6 +167,15 @@
 			name = "NFC Record";
 			sourceTree = "<group>";
 		};
+		DBE3BFC120D28705006EF4AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBE3BFC220D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.h */,
+				DBE3BFC320D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -175,6 +189,7 @@
 				24DD6CF91134B3F500162E58 /* TiNfcModule.h in Headers */,
 				DB856C461EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.h in Headers */,
 				DBF688371EEB4CB300009357 /* TiNfcNdefRecordProxy.h in Headers */,
+				DBE3BFC420D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* TiNfcModuleAssets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +267,7 @@
 				24DD6CFA1134B3F500162E58 /* TiNfcModule.m in Sources */,
 				DBF688381EEB4CB300009357 /* TiNfcNdefRecordProxy.m in Sources */,
 				DB856C471EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.m in Sources */,
+				DBE3BFC520D28734006EF4AE /* TiAppiOSUserActivityProxy+NFC.m in Sources */,
 				DBF688341EEB4B3500009357 /* TiNfcNdefMessageProxy.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiNfcModuleAssets.m in Sources */,
 				DB4613981F8CEF2A003956CF /* TiNfcUtilities.m in Sources */,
@@ -401,6 +417,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -460,7 +477,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ti.nfc;
