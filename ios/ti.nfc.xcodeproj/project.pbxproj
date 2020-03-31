@@ -26,6 +26,8 @@
 		24DD6CFA1134B3F500162E58 /* TiNfcModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* TiNfcModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* TiNfcModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiNfcModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* TiNfcModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiNfcModuleAssets.m */; };
+		3A8FC36D23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A8FC36B23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.h */; };
+		3A8FC36E23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8FC36C23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* TiNfc_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiNfc_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		DB2394562067C0680092DF6D /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB856C3F1EE98B1700DE4334 /* CoreNFC.framework */; };
@@ -55,6 +57,8 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		24DE9E0F11C5FE74003F90F6 /* TiNfcModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiNfcModuleAssets.h; path = Classes/TiNfcModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* TiNfcModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiNfcModuleAssets.m; path = Classes/TiNfcModuleAssets.m; sourceTree = "<group>"; };
+		3A8FC36B23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiNfcTagReaderSessionProxy.h; path = Classes/TiNfcTagReaderSessionProxy.h; sourceTree = "<group>"; };
+		3A8FC36C23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiNfcTagReaderSessionProxy.m; path = Classes/TiNfcTagReaderSessionProxy.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiNfc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiNfc_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libti.nfc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.nfc.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3A8FC36F23F6AB0000982E59 /* Tag Reader Session (iOS 13+) */,
 				DB6F99951EEB4AC2004F18FE /* NFC Record */,
 				DB6F99941EEB4ABC004F18FE /* NFC Message */,
 				DB6F99931EEB4AB2004F18FE /* NFC Adapter */,
@@ -133,6 +138,15 @@
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		3A8FC36F23F6AB0000982E59 /* Tag Reader Session (iOS 13+) */ = {
+			isa = PBXGroup;
+			children = (
+				3A8FC36B23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.h */,
+				3A8FC36C23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.m */,
+			);
+			name = "Tag Reader Session (iOS 13+)";
 			sourceTree = "<group>";
 		};
 		DB6F99931EEB4AB2004F18FE /* NFC Adapter */ = {
@@ -172,6 +186,7 @@
 				AA747D9F0F9514B9006C5449 /* TiNfc_Prefix.pch in Headers */,
 				DB4613971F8CEF2A003956CF /* TiNfcUtilities.h in Headers */,
 				DBF688331EEB4B3500009357 /* TiNfcNdefMessageProxy.h in Headers */,
+				3A8FC36D23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.h in Headers */,
 				24DD6CF91134B3F500162E58 /* TiNfcModule.h in Headers */,
 				DB856C461EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.h in Headers */,
 				DBF688371EEB4CB300009357 /* TiNfcNdefRecordProxy.h in Headers */,
@@ -205,17 +220,18 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1130;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ti.nfc" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				ja,
+				fr,
+				Base,
+				de,
+				en,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* ti.nfc */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -254,6 +270,7 @@
 				DB856C471EE98C3B00DE4334 /* TiNfcNfcAdapterProxy.m in Sources */,
 				DBF688341EEB4B3500009357 /* TiNfcNdefMessageProxy.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiNfcModuleAssets.m in Sources */,
+				3A8FC36E23F6AAFB00982E59 /* TiNfcTagReaderSessionProxy.m in Sources */,
 				DB4613981F8CEF2A003956CF /* TiNfcUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,11 +382,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -427,11 +446,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -474,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -485,9 +507,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "Build & test";
 				ZERO_LINK = NO;
 			};

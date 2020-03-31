@@ -15,4 +15,6 @@
 
 + (NSString *)NDEFContentFromData:(NSData *)data;
 
++ (NSString *)_dataToHexString:(NSData *)data;;
+
 @end
